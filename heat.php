@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	// checks if the variables are not null, completes calculation, prints result
 	if (($temperature <> NULL) && ($relativeHumidity <> NULL)) 
 	{
+		// checks if numbers entered are in the correct range
         if (($temperature >= 80) && ($temperature <= 112) && ($relativeHumidity >= 13) && ($relativeHumidity <= 85))
         {
 			$heatIndex =  -42.379 + (2.04901523 * $temperature) + (10.14333127 * $relativeHumidity) - 
@@ -62,14 +63,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 			echo "<p style=\"font-size: 1.1rem; color: orange;\";>If the temperature is " . $temperature . " and the humidity is " . $relativeHumidity . " then it feels like " . $heatIndex . " outside.</p>";
 	    } 
-        else
+        else // prints error if the numbers are not within range
         {
             echo "<p style=\"color: red; font-style: italic;\">The temperature should be a number between 80 and 112.<br>
             The humidity should be a number between 13 and 85.<br>
             Please try again.</p>";
         }
     }
-	elseif (($temperature == NULL) || ($relativeHumidity == NULL)) 
+	elseif (($temperature == NULL) || ($relativeHumidity == NULL)) // prints error message if the values are null
 	{
 		echo "<p style=\"color: red; font-style: italic;\">Please enter the temperature and humidity!</p>";
 	}
