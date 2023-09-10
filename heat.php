@@ -8,11 +8,11 @@
 <body>
 <?php 
 
-# CPT 283 Program 1 - HolmesHProgram1.php
+# CPT 283 Program 3 - heat.php
 # Created by Hannah Holmes
 # This script calculates the heat index ('Feels Like' temperature) based on a given temperature and relative humidity.
 # Heat index formula source: http://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml
-# Created 22 Aug 2023
+# Created 09 Sep 2023
 
 include ('includes/header.html');
 // Set table heading value

@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Weather Wizards Registration Submission Receipt</title>
+    <title>Weather Wizards Registration!</title>
 </head>
 <body>
 <?php 
 
-# checkform.php
-# Created 29 Aug 2023
+# register.php
+# Created 10 Sep 2023
 # Created by Hannah Holmes
-# This script handles the form created for my CPT 283 PHP class assignment 2
+# This script is a self-handling registration form
 
 include ('includes/header.html');
 
@@ -19,6 +19,7 @@ include ('includes/header.html');
 // workshops array
 $workshop[] ="";
 
+//determine if form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     // declare and assign variable for child name
@@ -85,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $center = NULL;
     }
-    
+    // array for workshops
     if (isset($_POST['workshop']))
 	{
 		foreach ($_POST['workshop'] as $value)

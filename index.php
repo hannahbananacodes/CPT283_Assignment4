@@ -1,4 +1,8 @@
 <?php # Script 3.7 - index.php #2
+# CPT 283 Program 3 - index.php
+# Created by Hannah Holmes
+# This is the home page of the weather wizards website
+# Created 09 Sep 2023
 
 // This function outputs theoretical HTML
 // for adding ads to a Web page.
