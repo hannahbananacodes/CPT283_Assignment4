@@ -17,7 +17,7 @@ include ('includes/header.html');
 // declare variables
 
 // workshops array
-$workshop[] ="";
+$workshop[] = "";
 
 //determine if form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -136,22 +136,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             echo "<p>Hi, $childName! Welcome to Weather Wizards, where the forecast is always a 99% chance of fun!</p>";
         }
-
+$mark = 1;
     // foreach loop to print the name of each selected workshop
-        if (isset($workshop))
+        if (array_key_exists($mark, $workshop))
         {
             echo "<p>You have chosen the following workshops.</p>";
             foreach ($workshop as $value)
             { // print the name of each workshop selected on a new line
                 echo "<p>$value</p>";
             }
+         
         }
-        else // if no checkboxes selected, print this message
+        else
         {
-            echo "<p>You have not chosen a workshop, but we add new workshops all the time. We'll keep you updated by e-mail.</p>";
+            echo "<p>You have not chosen a workshop, but we add new workshops all the time.
+            We'll keep you updated by e-mail.</p>";
         }
+        
     }
 }
+//print_r ($workshop);
 ?>
 
 <h1 class="text">Weather Wizards Workshops</h1>
